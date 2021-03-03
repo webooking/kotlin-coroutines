@@ -18,10 +18,18 @@ repositories {
 }
 
 dependencies {
+    val kotlinCoroutinesVersion = "1.4.2"
     val kotestVersion = "4.4.0.RC2"
-
+    val slf4jVersion = "1.7.30"
+    val log4jVersion = "2.14.0"
 
     implementation(kotlin("stdlib"))
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutinesVersion")
+
+    implementation("org.slf4j:slf4j-api:$slf4jVersion")
+    implementation("org.apache.logging.log4j:log4j-api:$log4jVersion")
+    implementation("org.apache.logging.log4j:log4j-core:$log4jVersion")
+    implementation("org.apache.logging.log4j:log4j-slf4j-impl:$log4jVersion")
 
     testImplementation("io.kotest:kotest-runner-junit5-jvm:$kotestVersion")
     testImplementation("io.kotest:kotest-assertions-core-jvm:$kotestVersion")
