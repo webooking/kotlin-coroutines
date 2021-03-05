@@ -1,6 +1,6 @@
 plugins {
     idea
-    kotlin("jvm") version "1.4.21"
+    kotlin("jvm") version "1.4.31"
 }
 
 idea {
@@ -18,16 +18,15 @@ repositories {
 }
 
 dependencies {
-    val kotlinCoroutinesVersion = "1.4.2"
-    val kotestVersion = "4.4.0.RC2"
+    val kotlinCoroutinesVersion = "1.4.3"
+    val kotestVersion = "4.4.1"
     val slf4jVersion = "1.7.30"
     val log4jVersion = "2.14.0"
 
     implementation(kotlin("stdlib"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutinesVersion")
+//    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:$kotlinCoroutinesVersion")
 
-    implementation("org.slf4j:slf4j-api:$slf4jVersion")
-    implementation("org.apache.logging.log4j:log4j-api:$log4jVersion")
     implementation("org.apache.logging.log4j:log4j-core:$log4jVersion")
     implementation("org.apache.logging.log4j:log4j-slf4j-impl:$log4jVersion")
 
